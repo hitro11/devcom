@@ -60,3 +60,11 @@ h1.home-title {
     padding-top: 70px;
     padding-bottom: 150px;
 }
+
+.navbar-default .navbar-toggle {
+    border-color: white;
+    
+    &:hover, &:focus {
+        background-color: #224f5e;
+    }
+}
