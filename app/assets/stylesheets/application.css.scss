@@ -16,6 +16,8 @@
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'font-awesome-sprockets'; 
+@import 'font-awesome';
 
 h1,h2,h3 {
     font-family: 'Roboto', sans-serif;
@@ -27,17 +29,29 @@ h1.home-title {
     font-size: 100px;
 }
 
-.navbar, .home-callout {
+.navbar, 
+.home-callout {
     //gradient provided by @_ighosh (UI Gradients)
     background: #1D4350;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.navbar, .navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
+.navbar {
     border:none;
+}
+
+.navbar-default .navbar-brand, 
+.navbar-default .navbar-nav > li > a {
     font-family: 'Alegreya Sans SC', sans-serif;
     color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    
+    &:hover {
+         color: white;
+        opacity: 0.70;
+    }
 }
 
 .home-callout {
@@ -45,10 +59,4 @@ h1.home-title {
     margin-top: -20px;
     padding-top: 70px;
     padding-bottom: 150px;
-}
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav li a:hover {
-    color:white;
-    opacity: 0.70;
-    
 }
