@@ -24,7 +24,7 @@ h1,h2,h3 {
 
 h1.home-title {
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 50px;
+    font-size: 100px;
 }
 
 .navbar, .home-callout {
@@ -34,9 +34,10 @@ h1.home-title {
     background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.navbar {
+.navbar, .navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
     border:none;
     font-family: 'Alegreya Sans SC', sans-serif;
+    color: white;
 }
 
 .home-callout {
@@ -44,4 +45,10 @@ h1.home-title {
     margin-top: -20px;
     padding-top: 70px;
     padding-bottom: 150px;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav li a:hover {
+    color:white;
+    opacity: 0.70;
+    
 }
