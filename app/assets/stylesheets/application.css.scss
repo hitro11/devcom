@@ -19,4 +19,29 @@
 
 h1,h2,h3 {
     font-family: 'Roboto', sans-serif;
+ 
+}
+
+h1.home-title {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 50px;
+}
+
+.navbar, .home-callout {
+    //gradient provided by @_ighosh (UI Gradients)
+    background: #1D4350;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar {
+    border:none;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.home-callout {
+    color: white;
+    margin-top: -20px;
+    padding-top: 70px;
+    padding-bottom: 150px;
 }

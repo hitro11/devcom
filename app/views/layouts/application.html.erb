@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Saasapp</title>
+    <title>DevMatch</title>
     <%= csrf_meta_tags %>
     <link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -27,8 +28,6 @@
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
-    <div class="container"
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
