@@ -43,15 +43,20 @@ h1.home-title {
 
 .navbar-default .navbar-brand, 
 .navbar-default .navbar-nav > li > a {
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Doisis', sans-serif;
     color: white;
-    font-size: 20px;
+    font-size: 13px;
     padding-top: 20px;
+    padding-bottom: 20px;
     
-    &:hover {
+    &:hover, &:focus {
          color: white;
-        opacity: 0.70;
+         opacity: 0.80;
     }
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    font-size: 25px;
 }
 
 .home-callout {
