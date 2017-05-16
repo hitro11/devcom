@@ -36,6 +36,9 @@ gem 'bootstrap-sass', '3.3.7'
 # font awesome gem (for icon)
 gem 'font-awesome-sass', '4.7'
 
+# Hirb for better database table di9play in console
+gem 'hirb','0.7.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
