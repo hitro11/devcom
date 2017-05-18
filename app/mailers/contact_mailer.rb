@@ -6,6 +6,6 @@ class ContaactMailer < ActionMailer::Base
     @email = email
     @body = body
     
-    mail (from: email, subject: 'DevMatch Contact Form')
+    mail(from: email, subject: 'DevMatch Contact Form')
   end
 end
