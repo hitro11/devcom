@@ -35,19 +35,31 @@ h1.home-title {
     background: #1D4350;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 10px;
 }
+
+
 
 .navbar {
     border:none;
 }
+
+.btn-primary {
+}
+
+#nav-buttons{
+    padding-top: 11px;
+    padding-left: 10px;
+
+}
+
 
 .navbar-default .navbar-brand, 
 .navbar-default .navbar-nav > li > a {
     font-family: 'Doisis', sans-serif;
     color: white;
     font-size: 13px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 6px;
     
     &:hover, &:focus {
          color: white;
