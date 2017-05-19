@@ -29,15 +29,18 @@ h1.home-title {
     font-size: 100px;
 }
 
+
+// Navbar Styles
+
 .navbar, 
 .home-callout {
     //gradient provided by @_ighosh (UI Gradients)
     background: #1D4350;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-bottom: 30px;
     padding-bottom: 10px;
 }
-
 
 
 .navbar {
@@ -53,7 +56,6 @@ h1.home-title {
 
 }
 
-
 .navbar-default .navbar-brand, 
 .navbar-default .navbar-nav > li > a {
     font-family: 'Doisis', sans-serif;
@@ -65,6 +67,10 @@ h1.home-title {
          color: white;
          opacity: 0.80;
     }
+}
+
+.alert-notice {
+    display: none;
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
