@@ -5,4 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   
   belongs_to :plan
+  
+  attr_accesor :stripe_card_token
+  
+  #if pro user passes validations, then call Stripe and tell Stripe to set up a subscription upon charging customer's card.
+  #Stripe responds back with customer data
+  #store customer.id as the customer token
+  def save_with_subscription
+    customer = Stripe::Customer.create(description: email, plan: plam_id, card: stripe_card_token)
+    self.stripe_card_token = customer.id
+    save!
+  end
 end
