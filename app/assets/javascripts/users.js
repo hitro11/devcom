@@ -14,21 +14,52 @@ $(document).on('turbolinks:load', function() {
         
         //prevent default submission behavior
         event.preventDefault();
+        submitBtn.val("Processing...").prop('disabled', true);
         
         //collect card fields
         var ccNum = $('#card_number').val(),
             ccCode = $('#card_code').val(),
             ccExpMonth = $('#card_month').val(),
             ccExpYear = $('#card_year').val();
-        
-        //send cc info to Stripe
-        Stripe.createToken({
+            
+        //error handling
+        var error = false;
+        if (!Stripe.card.validateCardNumber(ccNum) ||
+        !Stripe.card.validateCVC(ccCode) ||
+        !Stripe.card.validateExpiry(ccExpMonth, ccExpYear))
+        {
+            error = true;
+            alert("Credit card details are invalid")
+        }
+       
+        if (error) {
+            submitBtn.prop('disabled', false).val("Sign Up");
+        } 
+        else {
+            
+             //send cc info to Stripe
+            Stripe.createToken({
             number: ccNum,
             cvc: ccCode,
             exp_month: ccExpMonth,
             exp_year: ccExpYear
-        }, stripeResponseHandler);
+            },  stripeResponseHandler);
+        }
+        
+        return false;
     });
     
+    
+    //stripe will return token
+    function stripeResponseHandler(status, response) {
+        //get token from the response
+        var token = response.id;
+        
+        //inject token in hidden field of form
+        theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
+        
+        //submit form to server
+         theForm.get(0).submit();
+    }
     
 });
