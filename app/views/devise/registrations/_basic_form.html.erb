@@ -1,10 +1,6 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
-<!--custom error message -->
-<%= render 'layouts/error_messages', object: resource %> 
-  
-  <% hidden_field_tag 'plan', params[:plan] %>
-  
+  <%= hidden_field_tag 'plan', params[:plan] %>
+  <%= render 'layouts/error_messages', object: resource %> 
   <div class="field form-group">
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, class: 'form-control' %>

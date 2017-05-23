@@ -17,20 +17,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
   
-  def new
-    super do |resource|
-      if params[:plan]
-        resource.plan_id = params[:plan]
-        
-        #redirects to correct from when user submits form with an error
-        if resource.plan_id == 2
-         render :action => "new", :plan => 2
-        elsif resource.plan_id == 1
-          render :action => "new", :plan => 1
-        end
-      end
-    end
+  #redirect path for successful sign up
+  def after_sign_up_path_for(resource)
+    new_user_profile_path(user_id: current_user.id) if user_signed_in?
   end
+  
    
   
   #ensures that user selects a valid plan before signing up
