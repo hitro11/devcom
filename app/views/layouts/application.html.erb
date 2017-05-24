@@ -31,7 +31,6 @@
       <% if user_signed_in? %>
         <div class="nav navbar-nav navbar-right" id="nav-buttons">
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-navbar' %>
-          <i class=""></i>
         </div>
       <% else %>
        <div class="nav navbar-nav navbar-right" id="nav-buttons">
