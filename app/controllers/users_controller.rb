@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   # GET for user/:user_id
   def show
-    @user = User.find(params[:id])
+    @user = current_user
   end
   
 end

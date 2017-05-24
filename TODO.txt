@@ -1,1 +1,6 @@
 - randomize user_id (prevents url navigation)   
+
+
+
+Commands / Code Snippets
+rails db:seed
