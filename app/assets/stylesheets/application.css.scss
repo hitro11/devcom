@@ -59,8 +59,9 @@ h1,h2,h3,h4,h5,h6, .btn, {
     }
 }
 
-.alert-notice {
-    display: none;
+.alert-notice,
+{
+     display: none;
 }
 
 
@@ -91,13 +92,11 @@ h1.home-title {
 
 .navbar, 
 .home-callout {
-    
-background: #4bb679;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #173f4f, #4bb679);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #173f4f, #4bb679); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-    border:none;
+    background: #4bb679;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #173f4f, #4bb679);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #173f4f, #4bb679); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-bottom: none;
+    border: none;
 }
 
 .home-callout {
@@ -118,8 +117,7 @@ background: linear-gradient(to right, #173f4f, #4bb679); /* W3C, IE 10+/ Edge, F
     margin-top: 6px;
     
     &:hover, &:focus {
-         color: white;
-         opacity: 0.80;
+         color: #225f77;
     }
 }
 
@@ -134,3 +132,34 @@ background: linear-gradient(to right, #173f4f, #4bb679); /* W3C, IE 10+/ Edge, F
         background-color: #224f5e;
     }
 }
+
+
+.dropbtn {
+    font-size: 30px;
+    margin-top: 3px;
+    cursor: pointer;
+    color: white;
+    &:hover, &:focus {
+        color: #225f77;
+        
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    
+    & span {
+        
+    }
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
