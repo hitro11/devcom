@@ -1,4 +1,4 @@
-<%= form_for @profile, url: user_profile_path do |f| %>
+<%= form_for @profile, url: user_profile_path, :html => {:multipart => true} do |f| %>
   <%= render 'layouts/error_messages', object: @profile %>
   <div class="form-group">
     <%= f.label :first_name %>
@@ -8,12 +8,16 @@
     <%= f.label :last_name %>
     <%= f.text_field :last_name, class: 'form-control' %>
   </div>
+   <div class="form-group">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, class: 'form-control' %>
+  </div>
   <div class="form-group">
     <%= f.label :job_title %>
     <%= f.select :job_title, ['Developer', 'Entrepreneur', 'Investor'], {}, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :phone_number %>
+    <%= f.label :phone_num %>
     <%= f.text_field :phone_num, class: 'form-control' %>
   </div>
   <div class="form-group">

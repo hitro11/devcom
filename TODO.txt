@@ -4,3 +4,5 @@
 
 Commands / Code Snippets
 rails db:seed
+close and open server after installing gems
+rake db:reset db:migrate #reset db

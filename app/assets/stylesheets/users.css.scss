@@ -1,0 +1,89 @@
+.profile-page {
+    margin-top: 100px;
+}
+
+.avatar-prof-img {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.well.pro-contact-block {
+    display: table;
+    margin: auto;
+    color: white;
+    background-color: var(--col-pri);
+    margin-top: 40px;
+    h2 {
+        margin-top: -5px;
+    }
+}
+
+.well.description-block {
+    color: white;
+    background-color: var(--col-sec);
+    margin-top: 40px;
+    h2 {
+        margin-top: -5px;
+    }
+}
+
+.fa-ul  {
+   
+    > li {
+        margin-top: 10px;
+        display: inline-block;
+        margin-left: auto;
+        i {
+            font-size: 15px;
+        }
+    }
+    span {
+    font-family: 'Dosis', sans-serif;
+    font-size: 17px;
+    margin-left: 10px;
+    }
+}
+
+.job-title {
+    display: table;
+    margin: auto;
+}
+
+
+.job-icon-dev:before {
+    display: inline-block;
+    font-size: 25px;
+    border: 1px solid var(--col-pri);
+    border-radius: 40px;
+    padding: 4px;
+    background-color: var(--col-pri);
+    color: white;
+    //padding-top: 10px;
+    text-align: center;
+}
+
+.job-icon-inv:before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--col-sec);
+    border-radius: 50px;
+    background-color: var(--col-sec);
+    color: white;
+    padding-top: 10px;
+    margin-right: 5px;
+}
+
+.job-icon-ent:before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--col-ter);
+    border-radius: 50px;
+    background-color: var(--col-ter);
+    color: white;
+    padding-top: 10px;
+     margin-right: 5px;
+}

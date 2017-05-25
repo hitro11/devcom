@@ -13,31 +13,91 @@
  *= require_tree .
  *= require_self
  */
-
+ 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'font-awesome-sprockets'; 
 @import 'font-awesome';
 
-h1,h2,h3 {
+
+//------------------- Variables ---------------------------------------//
+
+:root {
+    --col-pri: #173f4f;
+    --col-sec: #3b9160;
+    --col-ter: #f2f20d;
+    
+}
+
+
+
+//------------------- General styles ---------------------------------------//
+
+h1,h2,h3,h4,h5,h6, .btn, {
     font-family: 'Dosis', sans-serif;
- 
+}
+
+.btn-primary {
+    color: white;
+    border-color: #173f4f;
+    background-color: #173f4f;
+    &:hover, &:focus {
+        border-color: #225f77;
+        background-color: #225f77;
+        color: white;
+    }
+}
+
+.btn-default {
+    color: white;
+    border-color: #3b9160; 
+    background-color: #3b9160; 
+    &:hover, &:focus {
+        border-color: #4bb679;
+        background-color: #4bb679;
+        color: white;
+    }
+}
+
+.alert-notice {
+    display: none;
+}
+
+
+
+//------------------- Homepage styles ---------------------------------------//
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    margin-top: -1px;
+}
+
+.home-callout {
+    font-size: 75px;
+    color: white;
+    margin-top: -20px;
+    padding-top: 70px;
+    padding-bottom: 100px;
 }
 
 h1.home-title {
-   font-family: 'Dosis', sans-serif;
-    font-size: 100px;
+    margin-top: 0;
+    font-size: 110px;
 }
 
 
-// Navbar Styles
+//-----------------------Navigation bar styles ---------------------------------------//
 
 .navbar, 
 .home-callout {
-    //gradient provided by @_ighosh (UI Gradients)
-    background: #1D4350;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+background: #4bb679;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #173f4f, #4bb679);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #173f4f, #4bb679); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    border:none;
 }
 
 .home-callout {
@@ -45,17 +105,9 @@ h1.home-title {
 }
 
 
-.navbar {
-    border:none;
-}
-
-.btn-primary {
-}
-
 #nav-buttons{
     padding-top: 11px;
     padding-left: 10px;
-
 }
 
 .navbar-default .navbar-brand, 
@@ -71,19 +123,8 @@ h1.home-title {
     }
 }
 
-.alert-notice {
-    display: none;
-}
-
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     font-size: 25px;
-}
-
-.home-callout {
-    color: white;
-    margin-top: -20px;
-    padding-top: 70px;
-    padding-bottom: 150px;
 }
 
 .navbar-default .navbar-toggle {

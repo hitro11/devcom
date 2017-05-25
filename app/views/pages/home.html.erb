@@ -6,24 +6,20 @@
 <div class="container home-signup">
      <div class="row">
         <div class="col-md-6">
-           <h2 class="text-center">Basic Membership</h2> 
-           </br>
-           <h4>
-               <ul>
-                   <li></li>
-               </ul>
-           </h4>
-            <%= link_to "Sign Up for Free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-default btn-lg btn-block' %>
+            <div class="well">
+               <h2 class="text-center">Basic Membership</h2> 
+               </br>
+               <h4 class="text-center">Sign up for free and get basic access to the community</h4>
+                <%= link_to "Sign Up for Free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block btn-free' %>
+            </div>
         </div>
          <div class="col-md-6">
-            <h2 class="text-center">Pro Membership</h2> 
-            </br>
-            <h4>
-               <ul>
-                   <li></li>
-               </ul>
-           </h4>
-           <%= link_to "Get the Pro Plan", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+            <div class="well">
+                <h2 class="text-center">Pro Membership</h2> 
+                </br>
+                <h4 class="text-center">Sign up for the pro account for $10/month and get full access to the community and contact information!</h4>
+               <%= link_to "Get the Pro Plan", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-default btn-lg btn-block btn-pro' %>
+            </div>
         </div>
     </div>
 </div>
