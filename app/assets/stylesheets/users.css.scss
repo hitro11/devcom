@@ -87,3 +87,21 @@
     padding-top: 10px;
      margin-right: 5px;
 }
+
+
+
+//---------------------------- User Index Styles ----------------------//
+.user-index-avatar {
+    width: 128px;
+    height: 128px;
+}
+
+.well{
+    color: white;
+    &.bg1 {
+        background-color: rgba(23, 63, 79, 0.7);
+    }
+    &.bg2 {
+       background-color: rgba(59, 145, 96, 0.7);
+    }
+}   

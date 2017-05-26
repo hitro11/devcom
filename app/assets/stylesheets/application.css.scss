@@ -87,6 +87,18 @@ h1.home-title {
     font-size: 110px;
 }
 
+.well-home-pro{
+    background-color: rgba(59, 145, 96, 0.7);
+    //color: var(--colo-pri);
+    color: white;
+}
+
+.well-home-basic{
+    background-color: rgba(23, 63, 79, 0.7);
+    //color: var(--colo-sec);
+    color: white;
+}
+
 
 //-----------------------Navigation bar styles ---------------------------------------//
 
@@ -168,6 +180,6 @@ h1.home-title {
 //------------------- Form styles ---------------------------------------//
 
 .well-form {
-    background: rgba(59, 145, 96, 0.9);
-    color: white;
+    background: rgba(59, 145, 96, 0.3);
+    color: var(--col-pri);
 }
