@@ -13,7 +13,12 @@
                                 </div>
                                 <div>
                                     <h2><%= user.profile.first_name%> <%= user.profile.last_name%></h2>
-                                    <h4><%= user.profile.job_title %></h4>
+                                    <p>
+                                        <h4><%= user.profile.job_title %></h4>
+                                        <% if user.plan_id == 2 %>
+                                        <span class="label label-danger">PRO</span>
+                                        <% end %>
+                                    </p>
                                 </div>
                             </div>
                         </li>
