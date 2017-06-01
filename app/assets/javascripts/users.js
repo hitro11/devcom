@@ -59,8 +59,7 @@ $(document).on('turbolinks:load', function() {
         theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
         
         //submit form to server
-         //theForm.get(0).submit();
-         document.getElementById("form-signup-btn").click();
+         theForm.get(0).submit();
     }
     
 });
