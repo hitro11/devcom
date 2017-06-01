@@ -1,3 +1,7 @@
+@import "variables";
+
+
+
 .profile-page {
     margin-top: 100px;
 }
@@ -13,7 +17,7 @@
     display: table;
     margin: auto;
     color: white;
-    background-color: var(--col-pri);
+    background-color: $col-pri;
     margin-top: 40px;
     h2 {
         margin-top: -5px;
@@ -22,7 +26,7 @@
 
 .well.description-block {
     color: white;
-    background-color: var(--col-sec);
+    background-color: $col-sec;
     margin-top: 40px;
     h2 {
         margin-top: -5px;
@@ -52,13 +56,13 @@
 }
 
 
-.job-icon-dev:before {
+.job-icon-dev {
     display: inline-block;
     font-size: 25px;
-    border: 1px solid var(--col-pri);
+    border: 1px solid $col-pri;
     border-radius: 40px;
     padding: 4px;
-    background-color: var(--col-pri);
+    background-color: $col-pri;
     color: white;
     //padding-top: 10px;
     text-align: center;
@@ -66,26 +70,28 @@
 
 .job-icon-inv:before {
     display: inline-block;
+    font-size: 30px;
     width: 50px;
     height: 50px;
-    border: 2px solid var(--col-sec);
+    border: 2px solid #85bb65; //dollar green
     border-radius: 50px;
-    background-color: var(--col-sec);
-    color: white;
-    padding-top: 10px;
-    margin-right: 5px;
+    background-color: #85bb65;
+    color: black;
+    padding-top: 8px;
+    padding-left: 7px;
 }
 
 .job-icon-ent:before {
     display: inline-block;
+    font-size: 30px;
     width: 50px;
     height: 50px;
-    border: 2px solid var(--col-ter);
+    border: 2px solid black;
     border-radius: 50px;
-    background-color: var(--col-ter);
-    color: white;
-    padding-top: 10px;
-     margin-right: 5px;
+    background-color: #ffff00;
+    color: black;
+    padding-top: 8px;
+    padding-left: 14px;
 }
 
 
@@ -99,9 +105,19 @@
 .well{
     color: white;
     &.bg1 {
-        background-color: rgba(23, 63, 79, 0.7);
+        background-color: $col-pri;
     }
     &.bg2 {
-       background-color: rgba(59, 145, 96, 0.7);
+       background-color: rgba($col-sec, 0.6);
     }
-}   
+} 
+
+.index-callout {
+    margin-top: -10px;
+    margin-bottom: 60px;
+}
+
+.label-default {
+    background: white;
+    color: $col-pri;
+}

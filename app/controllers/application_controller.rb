@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     if current_user.profile
       return root_path
     else
-      return new_user_path(user_id: current_user.id)
+      return new_user_profile_path(user_id: current_user.id)
     end
   end
   

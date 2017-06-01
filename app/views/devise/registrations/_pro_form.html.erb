@@ -16,20 +16,20 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
   </div>
-  <div class="field form-group">
+  <div class="field form-group card-num">
     <%= label_tag :card_number, "Credit Card Number" %>
     <%= text_field_tag :card_number, nil, name: nil, class: "form-control" %>
   </div>
-  <div class="field form-group">
-    <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-    <%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= label_tag :card_month, "Card Expiration" %>
-    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
+  <div class="form-group card-exp">
+    <%= label_tag :card_month, "Card Expiration" %> </br>
+    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" }%>
     <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
   </div>
+  <div class="field form-group card-info card-cvv">
+    <%= label_tag :card_code, "CVV" %>
+    <%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
+  </div>
   <div class="actions form-group">
-    <%= f.submit "Sign up", class: 'btn btn-primary' %>
+    <%= f.submit "Sign up", class: 'btn btn-default btn-lg btn-block', id: 'form-signup-btn' %>
   </div>
 <% end %>

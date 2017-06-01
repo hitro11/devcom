@@ -13,7 +13,7 @@
 
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class='container'>
+  <div class='container-fluid'>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -33,10 +33,19 @@
           <div class="dropdown">
             <i class="fa fa-user-circle dropbtn" onclick="myFunction()"></i>
             <div id="navbar-dropdown" class="dropdown-content">
-              <span> <%= link_to "My Account", edit_user_registration_path, class: 'btn btn-primary btn-navbar' %> </span>
-              <span> <%= link_to "View Profile", user_path(id: current_user.id), class: 'btn btn-primary btn-navbar' %> </span>
-              <span> <%= link_to "Edit Profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-primary btn-navbar' %> </span>
-              <span> <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-navbar btn-block' %> </span>
+              <span> <%= link_to "My Account", edit_user_registration_path, class: 'btn-navbar btn-block btn-default' %> </span>
+              <% if !current_user.profile %>
+                <span> <%= link_to "View Profile", new_user_profile_path(user_id: current_user.id), class: 'btn-navbar btn-block btn-default' %> </span>
+                <span> <%= link_to "Edit Profile", new_user_profile_path(user_id: current_user.id), class: ' btn-navbar btn-block btn-default' %> </span>
+              
+              <% else %>
+                <span> <%= link_to "View Profile", user_path(id: current_user.id), class: 'btn-navbar btn-block btn-default' %> </span>
+                <span> <%= link_to "Edit Profile", edit_user_profile_path(user_id: current_user.id), class: ' btn-navbar btn-block btn-default' %> </span>
+                
+              <% end %>
+              
+              <span> <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-navbar btn-block btn-default' %> </span>
+              
             </div>
           </div>
         </div>

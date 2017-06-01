@@ -4,7 +4,7 @@
 $(document).on('turbolinks:load', function() {
     
     var theForm = $('#pro_form');
-    var submitBtn = $('#form-submit-btn');
+    var submitBtn = $('#form-signup-btn');
     
     //set stripe public key
     Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
@@ -59,7 +59,8 @@ $(document).on('turbolinks:load', function() {
         theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
         
         //submit form to server
-         theForm.get(0).submit();
+         //theForm.get(0).submit();
+         document.getElementById("form-signup-btn").click();
     }
     
 });
