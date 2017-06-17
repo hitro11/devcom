@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   
   def after_sign_in_path_for(resource)
     if current_user.profile
-      return root_path
+      return users_path
     else
       return new_user_profile_path(user_id: current_user.id)
     end
