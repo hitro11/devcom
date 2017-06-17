@@ -4,11 +4,12 @@ class UsersController < ApplicationController
   
   # GET for user/:user_id
   def show
-    @user = current_user
+    @curr_user = current_user
+    @user = User.find(params[:id])
   end
   
   def index
-    @users = User.all
+    @users = User.includes(:profile)
   end
   
   

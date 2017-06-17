@@ -52,6 +52,15 @@ gem 'phone'
 # paperclip for image upload
 gem 'paperclip', '4.3.6'
 
+# Google maps gem
+gem 'gmaps4rails'
+
+# Material Design for Boostrap
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-bootstrap-material-design'
+end
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
+ *= require bootstrap-material-design
  */
+ 
  
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -24,14 +27,37 @@
 
 //------------------- General styles ---------------------------------------//
 
-h1,h2,h3,h4,h5,h6, .btn, {
-    font-family: 'Dosis', sans-serif;
+
+.html, .body {
+    height: 100%;
 }
 
-.btn-primary {
-    color: black;
-    border-color: white;
-    background-color: white;
+#home-container {
+    height: 100%;
+    width: 100%; 
+    padding-bottom: 240px;
+}
+
+h1,h2,h3,h4,h5,h6,p, .btn, {
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-default {
+    background-color: $col-ter !important;
+    color: white !important;
+}
+
+.page-title {
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 40px;  
+    color: $col-ter;
+}
+
+.btn .btn-primary {
+    color: $col-pri;
+    //border-color: white;
+    //background-color: white;
     &:hover, &:focus, &:active {
         border-color: #d9d9d9;
         background-color: #d9d9d9;
@@ -40,107 +66,128 @@ h1,h2,h3,h4,h5,h6, .btn, {
 }
 
 .btn-default {
-    color: white;
+    color: $col-sec;
     padding: 5px;
-    border-color: $col-pri; 
+    border-color: white; 
     background-color: $col-pri; 
     &:hover, &:focus, &:active {
-        border-color: $col-pri; 
+        border-color: white; 
         background-color: $col-pri;
         color: #bfbfbf;
         text-decoration: none;
     }
 }
 
-.alert-notice,
-{
+.alert-notice {
      display: none;
 }
-
-.page-title{
-    margin-top: 40px;
-    margin-bottom: 30px;  
-}
-
 
 
 //------------------- Homepage styles ---------------------------------------//
 
-
-.home-callout {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('meeting4.jpg');
-    background-size: cover; 
-    position: fixed;
-    margin-top: -30px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
+#home-callout {
     height: 100%;
-    width: 100%;
+    margin-top: -30px;
+    color: white !important;
+    animation-duration: 4s;
     h1 {
-        font-size: 170px;
-        margin-top: 60px;
+        font-size: 130px;
+        margin-top: 140px;
     }
 }
 
-.home-signup {
-    margin-top: 540px;
+#home-signup {
+    padding-top: 130px;
+    //padding-bottom: 200px;
     height: 100%;
-    padding-bottom: -50px;
+    h4 {
+        margin-top: -5px;
+    }
+    h2 {
+        margin-top: 2px;
+    }
 }
 
-.well-home {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;;
+.well-basic, .well-pro {
+    color: $col-pri !important;
+    margin-right: 120px;
+    margin-left: 120px;
+    animation-delay: 1s;
+}
+
+.well-pro {
+    color: $col-sec !important;
+}
+
+.btn-community-home {
+    background-color: white !important;
+    color: $col-pri !important;
 }
 
 .btn-free {
-    margin-top: 30px;
+    margin-top: 15px;
+    background-color: $col-pri !important;
+    color: white !important;
+}
+
+.btn-pro {
+    margin-top: 15px;
+    background-color: $col-sec !important;
+    color: white !important;
 }
 
 
 //-----------------------Navigation bar styles ---------------------------------------//
 
-.navbar, .home-signup {
-    background: -webkit-linear-gradient(90deg, $col-pri 5%, $col-sec 60%); /* Chrome 10+, Saf5.1+ */
-    background: -o-linear-gradient(90deg, $col-pri 5%, $col-sec 60%); /* Opera 11.10+ */ 
-    background: linear-gradient(90deg, $col-pri 5%, $col-sec 60%); /* W3C */ 
+.navbar, #home-container, #home-callout, #home-signup {
+    background: #2980b9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-bottom: none;
     border: none;
 }
 
-.navbar {
+.content {
+    height: 100%;
+    width: 100%;
+    margin-top: -25px;
+}
+
+.navbar, 
+.navbar.navbar-default {
     padding-left: 70px;
     padding-right: 70px;
+    margin-bottom: -10px;
 }
-
-
-.home-page {
-   
-}
-
 
 .navbar > .container .navbar-brand, 
 .navbar > .container-fluid .navbar-brand {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 25px;
     margin-top: -1px;
 }
 
 #nav-buttons{
-    padding-top: 11px;
+    padding-top: 10px;
     padding-left: 10px;
 }
 
+.btn-navbar {
+    background-color: white !important;
+    color: $col-sec !important;
+    text-transform: capitalize !important;
+    margin-top: 0px !important;
+}
+
 .navbar-default .navbar-brand, 
-.navbar-default .navbar-nav > li > a {
-    font-family: 'Doisis', sans-serif;
-    color: white;
+.navbar .navbar-nav > li > a {
+    font-family: 'Ubuntu', sans-serif;
+    color: white !important;
     font-size: 13px;
     margin-top: 6px;
     
     &:hover, &:focus {
-         color: #d9d9d9;
+         color: #d9d9d9 !important;
     }
 }
 
@@ -152,19 +199,21 @@ h1,h2,h3,h4,h5,h6, .btn, {
     }
 }
 
+#nav-login {
+    
+}
+
 .dropbtn {
     font-size: 30px;
-    margin-top: 3px;
+    margin-top: 5px;
     cursor: pointer;
     color: white;
     &:hover, &:focus {
         color: #d9d9d9;
-        
     }
 }
 
 .dropdown {
-    //position: relative;
     display: block;
 }
 
@@ -173,10 +222,6 @@ h1,h2,h3,h4,h5,h6, .btn, {
     display: none;
     position: fixed;
     z-index: 1;
-    
-    & span {
-        
-    }
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -187,29 +232,53 @@ h1,h2,h3,h4,h5,h6, .btn, {
 
 //------------------- Form styles ---------------------------------------//
 
-.form-group{
-    color: $col-pri;
+.form-group .checkbox label, 
+.form-group .radio label, 
+.form-group label,
+.form-group .form-control{
+    color: $col-pri !important;
 }
 
-.well-form {
-    background: rgba(0, 0, 0, 0.35);
-    margin-top: 30px;
-}
 
-.card-num {
-    width: 50%;
-}
 
 .card-exp {
-    display: inline-block;
+   display: inline-block;
 }
 .card-cvv {
-    width: 20%;
-    margin-left: 50px;
     display: inline-block;
+    margin-left: 100px !important;
+}
+
+.form-group select {
+    margin-top: 10px;
+    padding: 2px;
 }
 
 .form-link {
-    color: white;
-    //text-decoration: underline;
+    color: $col-pri !important;
+    &:hover, &:focus {
+        color: $col-sec;
+    }
+}
+
+textarea.form-control {
+    height: 150px;
+}
+
+
+//------------------- Contact styles ---------------------------------------//
+
+#contact-title {
+    margin-top: 60px;
+}
+
+#map-container {
+    position: relative;
+}
+
+#map {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    margin-top: -22px;
 }

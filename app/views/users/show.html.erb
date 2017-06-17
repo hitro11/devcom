@@ -5,7 +5,7 @@
            <h1 class="text-center"> <%= @user.profile.first_name %> <%= @user.profile.last_name %> </h1>
            <div class="job-title"><h3> <%= job_title_icon %> <%= @user.profile.job_title %> </h3></div>
            <div class="well pro-contact-block">
-              <% if @user.plan_id == 2 %>
+              <% if current_user.plan_id == 2 %>
                 <ul class="fa-ul">
                   <li><i class="fa fa-envelope"></i><span> <%= @user.profile.email  %></li> <br>
                   <li><i class="fa fa-phone"></i><span> <%= number_to_phone(@user.profile.phone_num, area_code: true)  %></li>

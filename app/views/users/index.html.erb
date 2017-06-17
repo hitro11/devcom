@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h1 class="page-title"> Devmatch Community</h1>
-            <p class="index-callout">Welcome to the devmatch community! Users must fill out a profile in order to be visible in the community</p>
+            <h1 class="page-title"> Devcom Community</h1>
+            <h4 class="index-callout">Welcome to the devcom community! Users must fill out a profile in order to be visible in the community.</h4>
             <ul class="list-unstyled">   
                 <% @users.each do |user| %>
                     <% if user.profile %>
@@ -10,11 +10,15 @@
                             <div class="well row <%= cycle('bg1', 'bg2') %> ">
                                 <div class="col-sm-4 text-center">
                                     <% if user.profile.avatar %>
-                                        <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                                        <%= link_to user do %>
+                                            <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                                        <% end %>
                                     <% end %>
                                 </div>
-                                <div>
-                                    <h2><%= user.profile.first_name%> <%= user.profile.last_name%></h2>
+                                <div id="name-profile">
+                                    <%= link_to user do %>
+                                        <h2><%= user.profile.first_name%> <%= user.profile.last_name%></h2>
+                                    <% end %>
                                     <p>
                                         <h4><%= user.profile.job_title %></h4>
                                         <% if user.plan_id == 2 %>

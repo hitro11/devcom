@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>devmatch</title>
+    <title>devcom</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
-    <link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,62 +13,63 @@
 
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class='container-fluid'>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-     <%= link_to root_path, class: "navbar-brand" do %>
-        <i class="fa fa-handshake-o"></i>
-        devmatch
-      <% end %>
-    </div>
+    <div class='container-fluid'>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+       <%= link_to root_path, class: "navbar-brand" do %>
+          <i class="fa fa-handshake-o"></i>
+          devcom
+        <% end %>
+      </div>
     
-    <div class="collapse navbar-collapse" id="main-nav-collapse">
-      <% if user_signed_in? %>
-         <div class="nav navbar-nav navbar-right" id="nav-buttons">
-          <div class="dropdown">
-            <i class="fa fa-user-circle dropbtn" onclick="myFunction()"></i>
-            <div id="navbar-dropdown" class="dropdown-content">
-              <span> <%= link_to "My Account", edit_user_registration_path, class: 'btn-navbar btn-block btn-default' %> </span>
-              <% if !current_user.profile %>
-                <span> <%= link_to "View Profile", new_user_profile_path(user_id: current_user.id), class: 'btn-navbar btn-block btn-default' %> </span>
-                <span> <%= link_to "Edit Profile", new_user_profile_path(user_id: current_user.id), class: ' btn-navbar btn-block btn-default' %> </span>
-              
-              <% else %>
-                <span> <%= link_to "View Profile", user_path(id: current_user.id), class: 'btn-navbar btn-block btn-default' %> </span>
-                <span> <%= link_to "Edit Profile", edit_user_profile_path(user_id: current_user.id), class: ' btn-navbar btn-block btn-default' %> </span>
+      <div class="collapse navbar-collapse" id="main-nav-collapse">
+        <% if user_signed_in? %>
+           <div class="nav navbar-nav navbar-right" id="nav-buttons">
+            <div class="dropdown">
+              <i class="fa fa-user-circle dropbtn" onclick="myFunction()"></i>
+              <div id="navbar-dropdown" class="dropdown-content">
+                <span> <%= link_to "My Account", edit_user_registration_path, class: 'btn-navbar btn-block btn-default' %> </span>
+                <% if !current_user.profile %>
+                  <span> <%= link_to "View Profile", new_user_profile_path(user_id: current_user.id), class: 'btn-navbar btn-block btn-default' %> </span>
+                  <span> <%= link_to "Edit Profile", new_user_profile_path(user_id: current_user.id), class: ' btn-navbar btn-block btn-default' %> </span>
                 
-              <% end %>
-              
-              <span> <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-navbar btn-block btn-default' %> </span>
-              
+                <% else %>
+                  <span> <%= link_to "View Profile", user_path(id: current_user.id), class: 'btn-navbar btn-block btn-default' %> </span>
+                  <span> <%= link_to "Edit Profile", edit_user_profile_path(user_id: current_user.id), class: ' btn-navbar btn-block btn-default' %> </span>
+                <% end %>
+                
+                <span> <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-navbar btn-block btn-default' %> </span>
+                
+              </div>
             </div>
           </div>
-        </div>
-      <% else %>
-        <div class="nav navbar-nav navbar-right" id="nav-buttons">
-          <%= link_to "Login", new_user_session_path, class: 'btn btn-primary btn-navbar' %>
-        </div>
-      <% end%>
-      <ul class="nav navbar-nav navbar-right">
-       <li><%= link_to "About", about_path %></li>
-       <li><%= link_to "Contact Us", new_contact_path %></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div>
-</nav>
+          <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Community", users_path %></li>
+          </ul>
+        <% else %>
+           <ul class="nav navbar-nav navbar-right">
+             <li><%= link_to "Login", new_user_session_path, class: 'waves-effect', id: "nav-login"%></li>
+           </ul>
+        <% end%>
+        <ul class="nav navbar-nav navbar-right">
+         <li><%= link_to "About", about_path %></li>
+         <li><%= link_to "Contact Us", new_contact_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
     
     <!-- stylized error messages (using boostrap) -->
-    <div class="container">
+      <div class="container">
       <% flash.each do |type, msg| %>
          <%= content_tag :div, msg, class: "alert alert-#{type} alert-dismissable fade in"  %>
       <% end %>
     </div>
-
     <%= yield %>
   </body>
 </html>
