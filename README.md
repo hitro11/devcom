@@ -1,3 +1,9 @@
-# README
+# devcom
+Web application that allows developers, entrepreneurs, and investors the ability to connect, collaborate, and create.
 
-[Upskill](http://upskillcourses.com) Software-as-a-Service Ruby on Rails App
+
+## Screenshots
+
+![home page](https://github.com/hitro11/devcom/home-full.png)
+![contact page](https://github.com/hitro11/devcom/contact.png)
+![payment page](https://github.com/hitro11/devcom/payment.png)
