@@ -1,14 +1,14 @@
 # Devcom
 Online community for developers, entrepreneurs and investors the ability to connect, collaborate, and create. 
 
-## Features
+# Features
 - Account creation & authentication
 - User profiles
 - Email notifications
 - subscription based membership billing
 
 
-## Screenshots
+# Screenshots
 
 ![home page](https://github.com/hitro11/devcom/blob/master/app/assets/images/home-full.PNG)
 ![profile page](https://github.com/hitro11/devcom/blob/master/app/assets/images/profile.PNG)
