@@ -8,8 +8,8 @@
     <%= f.label :last_name %>
     <%= f.text_field :last_name, class: 'form-control' %>
   </div>
-   <div class="form-group">
-    <%= f.label :avatar %>
+   <div id= "avatar-btn", class="form-group">
+    <%= f.label "Upload avatar" %>
     <%= f.file_field :avatar, class: 'form-control' %>
   </div>
   <div class="form-group">
@@ -32,7 +32,7 @@
     <% if $prof_createEdit == "create" %>
       <%= f.submit "Create Profile", class: 'btn btn-default btn-raised btn-block' %>
     <% else %>
-      <%= f.submit "Edit Profile", class: 'btn  btn-default btn-raised btn-block' %>
+      <%= f.submit "Update Profile", class: 'btn  btn-default btn-raised btn-block' %>
     <% end %>
   </div>
 <% end %>

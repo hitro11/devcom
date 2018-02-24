@@ -1,6 +1,13 @@
 @import "variables";
 
-
+#avatar-btn {
+    background-color: #d5e9f6;
+    border: 1px solid black;
+    border-radius: 10%;
+    width: 25%;
+    text-align: center;
+    padding-top: 10px;
+}
 
 .profile-page {
     margin-top: 100px;
@@ -119,3 +126,4 @@
          text-decoration: none;
     }
 }
+
