@@ -1,9 +1,14 @@
-# devcom
-Web application that allows developers, entrepreneurs, and investors the ability to connect, collaborate, and create.
+# Devcom
+Online community for developers, entrepreneurs and investors the ability to connect, collaborate, and create. 
+
+## Features
+- Account creation & authentication
+- User profiles
+- Email notifications
+- subscription based membership billing
 
 
 ## Screenshots
-
 ### Home Page
 ![home page](https://github.com/hitro11/devcom/blob/master/app/assets/images/home.PNG)
 
