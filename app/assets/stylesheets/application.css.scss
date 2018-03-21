@@ -39,7 +39,7 @@
 }
 
 h1,h2,h3,h4,h5,h6,p, .btn, {
-   font-family: 'Ubuntu', sans-serif;
+font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 .btn-default {
@@ -80,6 +80,10 @@ h1,h2,h3,h4,h5,h6,p, .btn, {
 
 .alert-notice {
      display: none;
+}
+
+.fade.in {
+    color: $col-pri;
 }
 
 
@@ -139,20 +143,14 @@ h1,h2,h3,h4,h5,h6,p, .btn, {
 
 //-----------------------Navigation bar styles ---------------------------------------//
 
-.navbar {
-    background: #2980b9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin-bottom: none;
-    border: none;
-}
 
-#home-container, 
-#home-callout, 
-#home-signup {
-    background: #2980b9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.navbar,
+#home-container{
+background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, $col-pri, $col-sec);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, $col-pri, $col-sec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 .content {
@@ -168,16 +166,14 @@ h1,h2,h3,h4,h5,h6,p, .btn, {
     margin-bottom: -10px;
 }
 
-.navbar > .container .navbar-brand, 
-.navbar > .container-fluid .navbar-brand {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 25px;
-    margin-top: -1px;
-}
 
 #nav-buttons{
     padding-top: 10px;
     padding-left: 10px;
+}
+
+a.navbar-brand h2 {
+    margin: -2px 0 0 0;
 }
 
 .btn-navbar {
@@ -190,12 +186,12 @@ h1,h2,h3,h4,h5,h6,p, .btn, {
 .navbar-default .navbar-brand, 
 .navbar .navbar-nav > li > a {
     font-family: 'Ubuntu', sans-serif;
-    color: white !important;
-    font-size: 13px;
+    color: white;
+    font-size: 15px;
     margin-top: 6px;
     
     &:hover, &:focus {
-         color: #d9d9d9 !important;
+         color: white !important;
     }
 }
 
@@ -205,10 +201,6 @@ h1,h2,h3,h4,h5,h6,p, .btn, {
     &:hover, &:focus {
         background-color: #d9d9d9;
     }
-}
-
-#nav-login {
-    
 }
 
 .dropbtn {
@@ -231,6 +223,8 @@ h1,h2,h3,h4,h5,h6,p, .btn, {
     position: fixed;
     z-index: 1;
 }
+
+
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
@@ -287,6 +281,6 @@ textarea.form-control {
 #map {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 300px;
     margin-top: -22px;
 }

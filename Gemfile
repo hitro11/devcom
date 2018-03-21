@@ -50,7 +50,7 @@ gem 'figaro', '1.1.1'
 gem 'phone'
 
 # paperclip for image upload
-gem 'paperclip', '4.3.6'
+gem 'paperclip', '5.2.0'
 
 # Google maps gem
 gem 'gmaps4rails'
