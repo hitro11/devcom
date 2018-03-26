@@ -28,14 +28,14 @@
 //------------------- General styles ---------------------------------------//
 
 
-.html, .body {
+html, body {
     height: 100%;
+    overflow: hidden
 }
 
 #home-container {
-    height: 100%;
     width: 100%; 
-    padding-bottom: 259px;
+    min-height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6,p, .btn, {
@@ -149,8 +149,6 @@ font-family: 'IBM Plex Sans Condensed', sans-serif;
 background: #ad5389;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, $col-pri, $col-sec);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, $col-pri, $col-sec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 }
 
 .content {
@@ -225,7 +223,6 @@ a.navbar-brand h2 {
 }
 
 
-
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
@@ -238,6 +235,7 @@ a.navbar-brand h2 {
 .form-group .radio label, 
 .form-group label,
 .form-group .form-control{
+    
     color: $col-pri !important;
 }
 
@@ -281,6 +279,6 @@ textarea.form-control {
 #map {
     position: relative;
     overflow: hidden;
-    height: 300px;
-    margin-top: -22px;
+    height: 200px;
+    margin-top: 0;
 }
