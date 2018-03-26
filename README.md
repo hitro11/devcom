@@ -13,7 +13,7 @@ Online community for developers, entrepreneurs and investors the ability to conn
 ![home page](https://github.com/hitro11/devcom/blob/master/app/assets/images/home.PNG)
 
 ### Signup Page
-![signup page](https://github.com/hitro11/devcom/blob/master/app/assets/images/signup.PNG)
+![signup page](https://github.com/hitro11/devcom/blob/master/app/assets/images/signup.png)
 
 ### Community Page
 ![community page](https://github.com/hitro11/devcom/blob/master/app/assets/images/community.PNG)
